@@ -1,0 +1,24 @@
+<select [(ngModel)]="selectedUserId" (ngModelChange)="selectUser()">
+  <option *ngFor="let item of users" [value]="item.id">{{item.name}} {{item.surname}}</option>
+</select>
+<div class="container">
+  <form>
+    <input type="hidden" name="id" [(ngModel)]="user.id" class="form-control">
+    <div class="mb-3">
+      <label for="name" class="form-label">Enter name:</label>
+      <input type="text" [(ngModel)]="user.name" class="form-control" name="firstname" id="name" placeholder="Name...">
+    </div>
+    <div class="mb-3">
+      <label for="surname" class="form-label">Enter surname:</label>
+      <input type="text" [(ngModel)]="user.surname" class="form-control" name="surname" id="surname"
+        placeholder="Surname...">
+    </div>
+    <div class="mb-3">
+      <label for="age" class="form-label">Enter age:</label>
+      <input type="number" [(ngModel)]="user.age" class="form-control" name="age" id="age" placeholder="Age">
+    </div>
+    <input type="button" class="btn btn-outline-primary" value="Edit" (click)="editUser()">
+  </form>
+
+</div>
+<div *ngIf="isEdited" style="color: green;">User have been succesfully edited!</div>

@@ -1,0 +1,10 @@
+<select [(ngModel)]="selectedUserId">
+  <option *ngFor="let item of users" [value]="item.id">{{item.name}} {{item.surname}}</option>
+</select>
+
+<form>
+  <label for="">Delete?</label>
+  <input type="button" class="btn btn-outline-danger" value="Yes" (click)="deleteUser()">
+</form>
+
+<div *ngIf="isDeleted" style="color: red;">User has been succesfully deleted!</div>
