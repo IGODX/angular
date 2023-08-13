@@ -1,0 +1,10 @@
+<div class="images">
+  <div *ngFor="let item of images">
+    <small>{{item.id}}</small>
+    <h3>{{item.title}}</h3>
+    <p>Year : {{item.year}}</p>
+    <p>Location : {{item.location}}</p>
+    <p>{{item.author}}</p>
+    <img src="{{item.imageUrl}}" alt="{{item.title}}">
+  </div>
+</div>

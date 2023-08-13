@@ -1,0 +1,13 @@
+
+.images {
+  display: flex;
+}
+
+img{
+  height: 35vh;
+  width: 25vh;
+}
+
+.images>div{
+  margin-right: 5vh;
+}
